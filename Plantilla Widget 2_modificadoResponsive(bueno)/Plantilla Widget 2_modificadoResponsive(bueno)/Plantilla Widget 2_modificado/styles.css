@@ -46,7 +46,7 @@
   font-style: italic;
 }
 
-.parallaxAa .parrafo {
+.parallaxAa .parrafo .parrafo2 {
   font-size: 17px;
   line-height: 26px;
   letter-spacing: 0;
@@ -376,36 +376,36 @@
   .parallaxAa .separa-5  { height: 3px; }
 }
 
-/* <= 460px: móvil Iphone 14 Pro Max */
-@media (max-width: 460px) {
+/* <= 430px: móvil Iphone 14 Pro Max */
+@media (max-width: 414px) {
   .parallaxAa {
     padding: 30px 0;
-    min-height: 565px;
+    min-height: 562px;
   }
 
   .parallaxAa .parallax-container {
-    min-height: 6px;
+    min-height: 50px;
   }
 
   .parallaxAa .titulo {
     font-size: 18px;
     line-height: 1.2;
-    padding-right: 10%;
+    padding-right: 8%;
 
   }
 
   .parallaxAa .parrafo {
     font-size: 13px;
-    line-height: 18px;
-    padding-right: 5%;
-    margin-right: 10px;
+    line-height: 15px;
+    padding-right: 6%;
+    margin-right: 9px;
   }
 
    .parallaxAa .parrafo2 {
     font-size: 13px;
-    line-height: 17px;
-    padding-right: 25%;
-    margin-right: 48px;
+    line-height: 18px;
+    padding-right: 27%;
+    margin-right: 40px;
     margin-top: 9px;
   }
 
@@ -415,8 +415,8 @@
 
   .parallaxAa .img-mr {
     position: relative; 
-    height: 310px;
-    left: 175px;
+    height: 315px;
+    left: 160px;
     top: 225px;
   }
 
@@ -436,6 +436,70 @@
   .parallaxAa .separa-30 { height: 15px; }
   .parallaxAa .separa-5  { height: 3px; }
 }
+
+/* <= 414px: móvil Iphone XR */
+@media (max-width: 430px) {
+  .parallaxAa {
+    padding: 30px 0;
+    min-height: 555px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 40px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-right: 8%;
+
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 13px;
+    line-height: 15px;
+    padding-right: 11%;
+    margin-right: 9px;
+  }
+
+   .parallaxAa .parrafo2 {
+    font-size: 13px;
+    line-height: 20px;
+    padding-right: 28%;
+    margin-right: 38px;
+    margin-top: 9px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 312px;
+    left: 160px;
+    top: 225px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    margin-bottom: 10%;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+
 
 /* <= 412px: móvil Samsung Galaxy S20 Ultra */
 @media (max-width: 470px) {
