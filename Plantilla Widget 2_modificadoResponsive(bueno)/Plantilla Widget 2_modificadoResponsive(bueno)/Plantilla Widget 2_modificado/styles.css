@@ -379,26 +379,34 @@
 /* <= 460px: móvil Iphone 14 Pro Max */
 @media (max-width: 460px) {
   .parallaxAa {
-    padding: 20px 0;
-    min-height: 460px;
+    padding: 30px 0;
+    min-height: 565px;
   }
 
   .parallaxAa .parallax-container {
-    min-height: 500px;
+    min-height: 6px;
   }
 
   .parallaxAa .titulo {
     font-size: 18px;
     line-height: 1.2;
-    padding-right: 30%;
+    padding-right: 10%;
 
   }
 
   .parallaxAa .parrafo {
     font-size: 13px;
     line-height: 18px;
-    padding-right: 30%;
-    margin-right: 45px;
+    padding-right: 5%;
+    margin-right: 10px;
+  }
+
+   .parallaxAa .parrafo2 {
+    font-size: 13px;
+    line-height: 17px;
+    padding-right: 25%;
+    margin-right: 48px;
+    margin-top: 9px;
   }
 
   .parallaxAa .antetitulo {
@@ -407,9 +415,9 @@
 
   .parallaxAa .img-mr {
     position: relative; 
-    height: 372px;
-    left: 250px;
-    top: 90px;
+    height: 310px;
+    left: 175px;
+    top: 225px;
   }
 
   .parallaxAa .fondo {
