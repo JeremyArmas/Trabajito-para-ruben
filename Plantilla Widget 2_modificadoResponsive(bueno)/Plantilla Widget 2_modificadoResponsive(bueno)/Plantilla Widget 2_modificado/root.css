@@ -1,0 +1,13 @@
+:root {
+  --primary_color: #970f20;
+  --secondary_color: #1f0504;
+  --third_color: #faf4f5;
+  --primary_font: 'Roboto', sans-serif;
+  --primary_color_font: #f1f1f1;
+  --secondary_font: 'Open Sans', sans-serif;
+  --secondary_color_font: #333333;
+  --preloader_background_color: #800709;
+  --preloader_font: 'Raleway', sans-serif;
+  --preloader_font_color: #a2a0a0;
+  --default-border-radius: 8px;
+}

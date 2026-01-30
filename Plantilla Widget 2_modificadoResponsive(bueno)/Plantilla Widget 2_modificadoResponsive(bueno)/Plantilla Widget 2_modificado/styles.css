@@ -1,0 +1,536 @@
+/* =========================
+   Dropify (solo overrides)
+   ========================= */
+.dropify-wrapper {
+  background-color: var(--secondary_color) !important;
+}
+
+/* =========================
+   Widget: scope + utilidades
+   ========================= */
+.parallaxAa,
+.parallaxAa * {
+  box-sizing: border-box;
+}
+
+.parallaxAa a {
+  color: #1f0504;
+  font-family: var(--primary_font);
+  text-decoration: none;
+}
+.parallaxAa a:hover,
+.parallaxAa a:active {
+  outline: 0;
+}
+
+.parallaxAa .no-repeat { background-repeat: no-repeat; }
+
+.parallaxAa .absolute { position: absolute; }
+.parallaxAa .relative { position: relative; }
+.parallaxAa .full { position: absolute; inset: 0; }
+
+/* =========================
+   Texto
+   ========================= */
+.parallaxAa .titulo {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: var(--primary_font);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.parallaxAa .antetitulo {
+  color: var(--third_color);
+  font-size: 20px;
+  font-style: italic;
+}
+
+.parallaxAa .parrafo {
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.parallaxAa .titulo-white,
+.parallaxAa .antetitulo-white,
+.parallaxAa .parrafo-white {
+  color: #fff;
+}
+
+/* =========================
+   Separadores
+   ========================= */
+.parallaxAa .separa-5  { height: 5px; }
+.parallaxAa .separa-30 { height: 30px; }
+.parallaxAa .separa-50 { height: 50px; }
+
+/* =========================
+   Parallax / Hero
+   ========================= */
+.parallaxAa {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(241,240,240,1) 100%);
+  padding: 140px 0;
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Caja principal (la que debe recortar fondo/degradado) */
+.parallaxAa .parallax-container {
+  position: absolute;
+  /* Dejamos un “margen” a la izquierda y redondeo SOLO ahí */
+  inset: 0 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+
+  border-radius: 65px 0 0 65px;
+  overflow: hidden;           /* <- clave: recorta el fondo para que no “sobresalga” */
+}
+
+/* “Bruma” superior (ahora va dentro de la caja y respeta el redondeo) */
+.parallaxAa .parallax-container::after {
+  content: none;
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 32px;
+  z-index: 4;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Fondo: ahora CUBRE todo (cover) */
+.parallaxAa .fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url("splashes/o_1gr0b14c0pev1vjp1f1r17ac15s0a.jpeg");
+  background-size: cover;      /* <- antes estaba contain, por eso no llenaba */
+  background-position: center; /* <- evita huecos raros */
+  background-repeat: no-repeat;
+}
+
+/* Parallax real (solo desktop) */
+@media (min-width: 992px) {
+  .parallaxAa .fondo {
+    background-attachment: fixed; /* <- recupera el efecto parallax al hacer scroll */
+  }
+}
+
+/* Degradado encima del fondo */
+.parallaxAa .opacidad {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  /* Degradado horizontal (izq rojo -> derecha transparente) */
+  background-image: linear-gradient(to right, var(--primary_color) 0%, var(--primary_color) 45%, transparent 80%);
+  opacity: 0.88; /* suaviza el rojo sin afectar al texto */
+}
+
+/* Imagen (mujer) */
+.parallaxAa .img-mr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Contenido por encima de todo */
+.parallaxAa .container {
+  position: relative;
+  z-index: 3;
+
+  /* Esto arregla lo de “pegado al borde” */
+  padding-left: clamp(24px, 4vw, 90px);
+  padding-right: clamp(16px, 3vw, 48px);
+}
+
+/* Evita que el .row de Bootstrap “se coma” padding con márgenes negativos */
+.parallaxAa .row {
+  --bs-gutter-x: 0;
+}
+
+/* =========================
+   Botón
+   ========================= */
+.parallaxAa .custom-button {
+  font-size: 16px;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  column-gap: 9px;
+}
+
+.parallaxAa .custom-button::before { border-radius: 5px; }
+
+.parallaxAa .custom-button,
+.parallaxAa .custom-button:hover,
+.parallaxAa .custom-button:focus,
+.parallaxAa .custom-button:active {
+  text-decoration: none;
+}
+
+.parallaxAa .custom-button.button-secundario {
+  background-color: #fff;
+  color: #1f0504;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.parallaxAa .custom-button.button-secundario:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.parallaxAa .custom-button.button-secundario:active {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(0);
+}
+
+.parallaxAa .hover-effect {
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.parallaxAa .hover-effect::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: all ease-out 0.3s;
+}
+
+.parallaxAa .hover-effect:hover:before,
+.parallaxAa .hover-effect:focus:before,
+.parallaxAa .hover-effect:active:before {
+  transform: translateX(0);
+}
+
+.parallaxAa .hover-effect.central_swipe-effect::before { transform: scaleX(0); }
+.parallaxAa .hover-effect.central_swipe-effect:hover:before,
+.parallaxAa .hover-effect.central_swipe-effect:focus:before,
+.parallaxAa .hover-effect.central_swipe-effect:active:before {
+  transform: scaleX(1);
+}
+
+
+.parallaxAa .button-secundario::before { background-color: var(--secondary_color); }
+.parallaxAa .button-secundario:hover { color: #fff; }
+
+.parallaxAa .centrado {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallaxAa .text-uppercase { text-transform: uppercase; }
+
+/* =========================
+   Responsive
+   ========================= */
+
+/* Vista de Desktop */
+@media (max-width: 992px) {
+  .parallaxAa {
+    padding: 80px 0px;
+    min-height: 520px;
+  }
+
+  .parallaxAa .parallax-container {
+    inset: 0;           
+    border-radius: 0;   
+    min-height: 420px;
+  }
+
+  .parallaxAa .img-mr { 
+    height: 95%;
+  }
+
+  .parallaxAa .opacidad {
+    background-image: linear-gradient(to bottom, var(--primary_color) 60%, transparent 100%);
+    opacity: 0.9;
+  }
+
+  .parallaxAa .titulo {
+    margin-right: 20px;
+    padding-right: 21%;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .parallaxAa .parrafo {
+    padding-right: 30%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .parallaxAa .custom-button {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .parallaxAa .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* Vista de tablet */
+@media (max-width: 768px) {
+  .parallaxAa {
+    padding: 60px 0;
+    min-height: 460px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 360px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 17px;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* <= 576px: móvil */
+@media (max-width: 576px) {
+  .parallaxAa {
+    padding: 20px 0;
+    min-height: 460px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 500px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-right: 30%;
+
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: 30%;
+    margin-right: 45px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 372px;
+    left: 250px;
+    top: 90px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    margin-bottom: 12%;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* <= 460px: móvil Iphone 14 Pro Max */
+@media (max-width: 460px) {
+  .parallaxAa {
+    padding: 20px 0;
+    min-height: 460px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 500px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-right: 30%;
+
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: 30%;
+    margin-right: 45px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 372px;
+    left: 250px;
+    top: 90px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    margin-bottom: 12%;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* <= 412px: móvil Samsung Galaxy S20 Ultra */
+@media (max-width: 412px) {
+  .parallaxAa {
+    padding: 20px 0;
+    min-height: 560px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 500px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-right: 30%;
+    margin-top: 10%;
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: 30%;
+    margin-right: 50px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 370px;
+    left: 105px;
+    top: 169px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    margin-bottom: 19%;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* <= 390px: móvil iPhone 12 Pro */
+@media (max-width: 390px) {
+  .parallaxAa {
+    padding: 20px 0;
+    min-height: 405px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 700px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    line-height: 1.2;
+    padding-right: 30%;
+
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: 30%;
+    margin-right: 45px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 372px;
+    left: 230px;
+    top: 90px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    margin-bottom: 12%;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
