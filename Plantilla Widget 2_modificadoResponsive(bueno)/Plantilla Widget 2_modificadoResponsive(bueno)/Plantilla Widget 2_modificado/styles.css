@@ -440,7 +440,10 @@
   .parallaxAa .separa-5  { height: 3px; }
 }
 
-/* Vista de Desktop */
+/* =========================
+   TABLET: base (hasta 992)
+   (Tablet general / landscape móvil grande / etc.)
+   ========================= */
 @media (max-width: 992px) {
   .parallaxAa {
     padding: 80px 0px;
@@ -448,12 +451,12 @@
   }
 
   .parallaxAa .parallax-container {
-    inset: 0;           
-    border-radius: 0;   
+    inset: 0;
+    border-radius: 0;
     min-height: 420px;
   }
 
-  .parallaxAa .img-mr { 
+  .parallaxAa .img-mr {
     height: 95%;
   }
 
@@ -489,7 +492,10 @@
   }
 }
 
-/* <= 820x: iPad Air */
+/* =========================
+   TABLET “AIR-ish” (880)
+   (Ajustes mínimos SOLO para esta franja)
+   ========================= */
 @media (max-width: 880px) {
   .parallaxAa {
     padding: 60px 0;
@@ -529,7 +535,7 @@
   }
 
   .parallaxAa .img-mr {
-    position: relative; 
+    position: relative;
     height: 572px;
     left: 299px;
     top: 59px;
@@ -541,7 +547,10 @@
   }
 }
 
-/* <= 768x: tablet general / iPad Mini */
+/* =========================
+   TABLET “MINI-ish” (828)
+   (Ajustes mínimos SOLO para esta franja)
+   ========================= */
 @media (max-width: 828px) {
   .parallaxAa {
     padding: 60px 0;
@@ -589,7 +598,7 @@
   }
 
   .parallaxAa .img-mr {
-    position: relative; 
+    position: relative;
     height: 572px;
     left: 289px;
     top: 59px;
@@ -606,409 +615,157 @@
   .parallaxAa .separa-5  { height: 3px; }
 }
 
-/* <= 576px: móvil general */
+
+/* =========================
+   MÓVIL: base (hasta 576)
+   ========================= */
 @media (max-width: 576px) {
-  .parallaxAa {
-    padding: 20px 0;
-    min-height: 460px;
+  .parallaxAa { 
+    padding: 40px 0; 
+    min-height: 520px; 
+  }
+  
+  .parallaxAa .parallax-container { 
+    align-items: flex-start; 
+    padding-top: 18px;       
+    padding-bottom: 18px;
+  }
+  
+  .parallaxAa .antetitulo { 
+    font-size: 15px; margin-top: 0; 
   }
 
-  .parallaxAa .parallax-container {
-    min-height: 500px;
-  }
-
-  .parallaxAa .titulo {
-    font-size: 18px;
-    line-height: 1.2;
-    padding-right: 30%;
-
-  }
-
-  .parallaxAa .parrafo {
+  .parallaxAa .parrafo,
+  .parallaxAa .parrafo2,
+  .parallaxAa .parrafo3 { 
     font-size: 13px;
-    line-height: 18px;
-    padding-right: 30%;
-    margin-right: 45px;
+    line-height: 15px;
   }
 
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 372px;
-    left: 250px;
-    top: 90px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 16px;
-    margin-bottom: 12%;
-    font-size: 11px;
+  .parallaxAa .img-mr { 
+    position: absolute;
+    height: 70%; 
+    right: auto;
     width: auto;
-    display: inline-flex;
+    left: auto;
+    top: auto; 
   }
 
-  .parallaxAa .separa-50 { height: 25px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
+  .parallaxAa .custom-button { 
+    padding: 10px 14px; 
+    width: auto; 
+    font-size: 12px; 
+  }
+
+  .parallaxAa .separa-50 { 
+    height: 18px; 
+  }
+  .parallaxAa .separa-30 { 
+    height: 12px; 
+  }
+  .parallaxAa .separa-5  { 
+    height: 3px; 
+  }
 }
 
-/* iPhone 14 Pro Max aprox */
+/* =========================
+   MÓVIL GRANDE (430/414/412)
+   iPhone 14 Pro Max, XR, Pixel 7, S20 Ultra
+   ========================= */
 @media (max-width: 440px) {
-  .parallaxAa {
-    padding: 30px 0;
-    min-height: 560px;
+  .parallaxAa .titulo { 
+    font-size: 20px; 
+  }
+  
+  .parallaxAa .img-mr { 
+    height: 62%; right: -30px; 
   }
 
-  .parallaxAa .parallax-container {
-    min-height: 40px;
-  }
-
-  .parallaxAa .titulo {
-    font-size: 19px;
-    line-height: 1.2;
-    padding-right: 8%;
+  /* Justify sin “huecos bestias” */
+  .parallaxAa .parrafo{
 
   }
 
-  .parallaxAa .parrafo {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 10%;
-    text-align: justify;
-  }
+  .parallaxAa .parrafo2{
 
-   .parallaxAa .parrafo2 {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 32%;
-    margin-top: 9px;
-    text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 39%;
-    margin-top: 9px;
-    text-align: justify;
-  }
-
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 325px;
-    left: 160px;
-    top: 210px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 10px;
-    margin-bottom: 5%;
-    font-size: 11px;
-    width: auto;
-    display: inline-flex;
-  }
-
-  .parallaxAa .separa-50 { height: 25px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
-}
-
-/* XR / Pixel 7 / S20 Ultra */
-@media (max-width: 420px) {
-  .parallaxAa {
-    padding: 30px 0;
-    min-height: 630px;
-  }
-
-  .parallaxAa .parallax-container {
-    min-height: 440px;
-    margin-top: 10%;
-  }
-
-  .parallaxAa .titulo {
-    font-size: 19px;
-    line-height: 1.2;
-    padding-right: 8%;
-  }
-
-  .parallaxAa .parrafo {
-    font-size: 12px;
-    line-height: 15px;
-    padding-right: 5%;
-    text-align: justify;
-  }
-
-   .parallaxAa .parrafo2 {
-    font-size: 12px;
-    line-height: 15px;
-    padding-right: 14%;
-    margin-top: 9px;
-    max-width: 85%;
-    margin-right: auto;
-    text-align: justify;
-  }
-
-  .parallaxAa .parrafo3 {
-    font-size: 12px;
-    line-height: 15px;
-    padding-right: 10%;
-    margin-top: 9px;
-    max-width: 74%;
-    margin-right: auto;
-    text-align: justify;
-  }
-
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 288px;
-    left: 179px;
-    top: 314px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 16px;
-    margin-bottom: 10%;
-    font-size: 11px;
-    width: auto;
-    display: inline-flex;
-  }
-
-  .parallaxAa .separa-50 { height: 25px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
-}
-
-
-/* iPhone 12 Pro */ 
-@media (max-width: 400px) {
-  .parallaxAa {
-    padding: 20px 0;
-    min-height: 630px;
-  }
-
-  .parallaxAa .parallax-container {
-    min-height: 590px;
-  }
-
-  .parallaxAa .titulo {
-    font-size: 19px;
-    line-height: 1;
-    padding-right: 30%;
-  }
-
-  .parallaxAa .parrafo {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 15%;
-    text-align: justify;
-  }
-
-  .parallaxAa .parrafo2 {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 30%;
-    text-align: justify;
-  }
-
-  .parallaxAa .parrafo3 {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 39%;
-    text-align: justify;
-  }
-
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-    margin-top: 25px;
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 300px;
-    left: 140px;
-    top: 309px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 12px;
-    margin-bottom: 20%;
-    font-size: 11px;
-    width: auto;
-    display: inline-flex;
-  }
-
-  .parallaxAa .separa-50 { height: 10px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
-}
-
-/* Galaxy S8+ y SE (375) */
-@media (max-width: 380px) {
-  .parallaxAa {
-    padding: 20px 0;
-    min-height: 640px;
-  }
-
-  .parallaxAa .parallax-container {
-    min-height: 580px;
-  }
-
-  .parallaxAa .titulo {
-    font-size: 20px;
-    line-height: 1.2;
-    padding-right: 30%;
-    margin-top: 5px;
-  }
-
-  .parallaxAa .parrafo {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 5%;
-    margin-right: 30px;
-    text-align: justify;
-  }
-
-  .parallaxAa .parrafo2 {
-    font-size: 13px;
-    line-height: 15px;
-    padding-right: 33%;
-    text-align: justify;
-  }
-
-  .parallaxAa .parrafo3 {
-    font-size: 12.3px;
-    line-height: 15px;
-    padding-right: 41%;
-    text-align: justify;
     hyphens: auto;
+    overflow-wrap: anywhere;
+    text-justify: inter-word;
+    text-align-last: left;
   }
-
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-    margin-top: 15%;
-
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 300px;
-    left: 130px;
-    top: 319px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 16px;
-    margin-bottom: 19%;
-    font-size: 11px;
-    width: auto;
-    display: inline-flex;
-  }
-
-  .parallaxAa .separa-50 { height: 25px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
 }
 
-/* SE pequeño (320) */
-@media (max-width: 335px) {
-  .parallaxAa {
-    padding: 20px 0;
-    min-height: 660px;
+/* =========================
+   MÓVIL MEDIO (390)
+   iPhone 12 Pro / 13 / 14
+   ========================= */
+@media (max-width: 400px) {
+  .parralaxAa .antetitulo{
+    margin-top: 13%;
   }
 
-  .parallaxAa .parallax-container {
-    min-height: 550px;
+  .parallaxAa .titulo { 
+    font-size: 19px; 
   }
 
+  .parallaxAa .parrafo{
+    padding-right: 5px;
+  }
+
+  .parallaxAa .parrafo2{
+    padding-right: 20%;
+  }
+
+  .parallaxAa .parrafo3 { 
+    text-align: left;
+  }
+  
+  .parallaxAa .img-mr { 
+    height: 52%; 
+    left: 147px; 
+  }
+}
+
+/* =========================
+   MÓVIL PEQUEÑO (375/360)
+   iPhone SE (375) + Galaxy S8+ (360)
+   ========================= */
+@media (max-width: 376px) {
   .parallaxAa .titulo {
-    font-size: 18px;
-    line-height: 1.2;
-    padding-right: 30%;
-    margin-top: 5px;
+    font-size: 19px; 
+  }
+  
+  .parallaxAa .parrafo{
+    padding-right: 10px;
   }
 
-  .parallaxAa .parrafo {
-    font-size: 13px;
-    line-height: 18px;
-    padding-right: 5%;
-    margin-right: 50px;
+  .parallaxAa .parrafo2{
+    padding-right: 16%;
   }
 
-  .parallaxAa .parrafo2 {
-    font-size: 13px;
-    line-height: 18px;
-    padding-right: 25%;
-    max-width: 74%;
-    margin-right: auto;
+  .parallaxAa .parrafo3 { 
+    text-align: left;
   }
-
-  .parallaxAa .parrafo3 {
-    font-size: 13px;
-    line-height: 18px;
-    padding-right: 30%;
-    max-width: 74%;
-    margin-right: auto;
+  
+  .parallaxAa .img-mr { 
+    height: 55%; 
+    left: 120px; 
   }
-
-  .parallaxAa .antetitulo {
-    font-size: 15px;
-    margin-top: 10%;
-
-  }
-
-  .parallaxAa .img-mr {
-    position: relative; 
-    height: 350px;
-    left: 200px;
-    top: 280px;
-  }
-
-  .parallaxAa .fondo {
-    background-attachment: scroll;
-  }
-
-  .parallaxAa .custom-button {
-    padding: 10px 16px;
-    margin-bottom: 19%;
-    font-size: 11px;
-    width: auto;
-    display: inline-flex;
-  }
-
-  .parallaxAa .separa-50 { height: 25px; }
-  .parallaxAa .separa-30 { height: 15px; }
-  .parallaxAa .separa-5  { height: 3px; }
 }
 
+/* =========================
+   ULTRA PEQUEÑO (≈320)
+   ========================= */
+@media (max-width: 340px) {
+  .parallaxAa .titulo { 
+    font-size: 17px; 
+  }
+  
+  .parallaxAa .custom-button { 
+    padding: 9px 12px; 
+    font-size: 11px; 
+  }
+}
