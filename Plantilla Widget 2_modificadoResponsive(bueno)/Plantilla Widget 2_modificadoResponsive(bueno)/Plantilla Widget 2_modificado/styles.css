@@ -33,7 +33,7 @@
    Texto
    ========================= */
 .parallaxAa .titulo {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   font-family: var(--primary_font);
   margin: 0;
@@ -756,17 +756,20 @@
    .parallaxAa .parrafo2 {
     font-size: 12px;
     line-height: 15px;
-    padding-right: 25%;
+    padding-right: 14%;
     margin-top: 9px;
-    margin-right: 40px;
+    max-width: 85%;
+    margin-right: auto;
     text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
     font-size: 12px;
     line-height: 15px;
-    padding-right: 40%;
+    padding-right: 10%;
     margin-top: 9px;
+    max-width: 74%;
+    margin-right: auto;
     text-align: justify;
   }
 
@@ -777,9 +780,9 @@
 
   .parallaxAa .img-mr {
     position: relative; 
-    height: 315px;
-    left: 155px;
-    top: 285px;
+    height: 288px;
+    left: 179px;
+    top: 314px;
   }
 
   .parallaxAa .fondo {
@@ -917,7 +920,7 @@
   .parallaxAa .img-mr {
     position: relative; 
     height: 300px;
-    left: 115px;
+    left: 130px;
     top: 319px;
   }
 
@@ -967,14 +970,16 @@
     font-size: 13px;
     line-height: 18px;
     padding-right: 25%;
-    margin-right: 55px;
+    max-width: 74%;
+    margin-right: auto;
   }
 
   .parallaxAa .parrafo3 {
     font-size: 13px;
     line-height: 18px;
     padding-right: 30%;
-    margin-right: 55px;
+    max-width: 74%;
+    margin-right: auto;
   }
 
   .parallaxAa .antetitulo {
@@ -986,7 +991,7 @@
   .parallaxAa .img-mr {
     position: relative; 
     height: 350px;
-    left: 125px;
+    left: 200px;
     top: 280px;
   }
 
