@@ -46,17 +46,21 @@
   font-style: italic;
 }
 
-.parallaxAa .parrafo .parrafo2 {
+.parallaxAa .parrafo,
+.parallaxAa .parrafo2,
+.parallaxAa .parrafo3 {
   font-size: 17px;
   line-height: 26px;
   letter-spacing: 0;
   margin: 0;
+  text-align: justify;
+  margin-top: 10px;
 }
 
 .parallaxAa .titulo-white,
 .parallaxAa .antetitulo-white,
 .parallaxAa .parrafo-white {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* =========================
@@ -239,9 +243,8 @@
    Responsive
    ========================= */
 
-
-/* iPad Pro / Nest Hub */
-@media (max-width: 1100px) {
+/* <= 1368px: Surface Pro 7 */
+@media (max-width: 1428px) {
   .parallaxAa {
     padding: 20px 0;
 
@@ -272,6 +275,141 @@
     font-size: 14px;
     line-height: 20px;
     margin-right: 35px;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 650px;
+    left: 380px;
+    top: 29px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* 1280 px portatiles medianos / iPad Pro / Nest Hub Max */
+@media (max-width: 1340px) {
+  .parallaxAa {
+    padding: 20px 0;
+
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 550px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    padding-right: 30%;
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 50px;
+    text-align: justify;
+  }
+
+  .parallaxAa .parrafo2 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 35px;
+    text-align: justify;
+
+  }
+
+  .parallaxAa .parrafo3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 35px;
+    text-align: justify;
+
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 15px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 650px;
+    left: 380px;
+    top: 29px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    font-size: 11px;
+    width: auto;
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* <= 1024x: tablets grandes / iPad Pro / Nest Hub */
+@media (max-width: 1084px) {
+  .parallaxAa {
+    padding: 20px 0;
+
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 550px;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 18px;
+    padding-right: 30%;
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 50px;
+        text-align: justify;
+
+  }
+
+  .parallaxAa .parrafo2 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 35px;
+        text-align: justify;
+
+  }
+
+  .parallaxAa .parrafo3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 35px;
+        text-align: justify;
+
   }
 
   .parallaxAa .antetitulo {
@@ -351,8 +489,8 @@
   }
 }
 
-/* Vista de tablet */
-@media (max-width: 768px) {
+/* <= 820x: iPad Air */
+@media (max-width: 880px) {
   .parallaxAa {
     padding: 60px 0;
     min-height: 460px;
@@ -376,8 +514,25 @@
     line-height: 22px;
   }
 
+  .parallaxAa .parrafo2 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .parallaxAa .parrafo3 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   .parallaxAa .antetitulo {
     font-size: 17px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 572px;
+    left: 299px;
+    top: 59px;
   }
 
   .parallaxAa .custom-button {
@@ -386,7 +541,72 @@
   }
 }
 
-/* <= 576px: móvil */
+/* <= 768x: tablet general / iPad Mini */
+@media (max-width: 828px) {
+  .parallaxAa {
+    padding: 60px 0;
+    min-height: 600px;
+  }
+
+  .parallaxAa .parallax-container {
+    min-height: 360px;
+    margin-top: -10px;
+  }
+
+  .parallaxAa .fondo {
+    background-attachment: scroll;
+  }
+
+  .parallaxAa .titulo {
+    font-size: 35px;
+    line-height: 1.1;
+  }
+
+  .parallaxAa .parrafo {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 33%;
+    text-align: justify;
+  }
+
+  .parallaxAa .parrafo2 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 40%;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .parallaxAa .parrafo3 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-right: 45%;
+    text-align: justify;
+  }
+
+  .parallaxAa .antetitulo {
+    font-size: 17px;
+  }
+
+  .parallaxAa .img-mr {
+    position: relative; 
+    height: 572px;
+    left: 289px;
+    top: 59px;
+  }
+
+  .parallaxAa .custom-button {
+    padding: 10px 16px;
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-30 { height: 15px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* <= 576px: móvil general */
 @media (max-width: 576px) {
   .parallaxAa {
     padding: 20px 0;
@@ -451,7 +671,7 @@
   }
 
   .parallaxAa .titulo {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.2;
     padding-right: 8%;
 
@@ -461,23 +681,23 @@
     font-size: 13px;
     line-height: 15px;
     padding-right: 10%;
-    margin-right: 10px;
+    text-align: justify;
   }
 
    .parallaxAa .parrafo2 {
     font-size: 13px;
     line-height: 15px;
     padding-right: 32%;
-    margin-right: 40px;
     margin-top: 9px;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
     font-size: 13px;
     line-height: 15px;
     padding-right: 39%;
-    margin-right: 43px;
     margin-top: 9px;
+    text-align: justify;
   }
 
   .parallaxAa .antetitulo {
@@ -512,41 +732,42 @@
 @media (max-width: 420px) {
   .parallaxAa {
     padding: 30px 0;
-    min-height: 555px;
+    min-height: 630px;
   }
 
   .parallaxAa .parallax-container {
-    min-height: 40px;
+    min-height: 440px;
+    margin-top: 10%;
   }
 
   .parallaxAa .titulo {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.2;
     padding-right: 8%;
-
   }
 
   .parallaxAa .parrafo {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 15px;
-    padding-right: 11%;
-    margin-right: 9px;
+    padding-right: 5%;
+    text-align: justify;
   }
 
    .parallaxAa .parrafo2 {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 15px;
-    padding-right: 28%;
-    margin-right: 38px;
+    padding-right: 25%;
     margin-top: 9px;
+    margin-right: 40px;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 15px;
-    padding-right: 38%;
-    margin-right: 40px;
+    padding-right: 40%;
     margin-top: 9px;
+    text-align: justify;
   }
 
   .parallaxAa .antetitulo {
@@ -556,9 +777,9 @@
 
   .parallaxAa .img-mr {
     position: relative; 
-    height: 330px;
-    left: 140px;
-    top: 200px;
+    height: 315px;
+    left: 155px;
+    top: 285px;
   }
 
   .parallaxAa .fondo {
@@ -583,41 +804,39 @@
 @media (max-width: 400px) {
   .parallaxAa {
     padding: 20px 0;
-    min-height: 550px;
+    min-height: 630px;
   }
 
   .parallaxAa .parallax-container {
-    min-height: 580px;
+    min-height: 590px;
   }
 
   .parallaxAa .titulo {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1;
     padding-right: 30%;
-
   }
 
   .parallaxAa .parrafo {
     font-size: 13px;
     line-height: 15px;
-    padding-right: 14%;
-    margin-right: 20px;
+    padding-right: 15%;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo2 {
     font-size: 13px;
     line-height: 15px;
-    padding-right: 24%;
-    margin-right: 40px;
+    padding-right: 30%;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
     font-size: 13px;
     line-height: 15px;
-    padding-right: 30%;
-    margin-right: 50px;
+    padding-right: 39%;
+    text-align: justify;
   }
-
 
   .parallaxAa .antetitulo {
     font-size: 15px;
@@ -627,8 +846,8 @@
   .parallaxAa .img-mr {
     position: relative; 
     height: 300px;
-    left: 145px;
-    top: 230px;
+    left: 140px;
+    top: 309px;
   }
 
   .parallaxAa .fondo {
@@ -643,7 +862,7 @@
     display: inline-flex;
   }
 
-  .parallaxAa .separa-50 { height: 25px; }
+  .parallaxAa .separa-50 { height: 10px; }
   .parallaxAa .separa-30 { height: 15px; }
   .parallaxAa .separa-5  { height: 3px; }
 }
@@ -652,7 +871,7 @@
 @media (max-width: 380px) {
   .parallaxAa {
     padding: 20px 0;
-    min-height: 630px;
+    min-height: 640px;
   }
 
   .parallaxAa .parallax-container {
@@ -660,7 +879,7 @@
   }
 
   .parallaxAa .titulo {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.2;
     padding-right: 30%;
     margin-top: 5px;
@@ -671,20 +890,22 @@
     line-height: 15px;
     padding-right: 5%;
     margin-right: 30px;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo2 {
     font-size: 13px;
     line-height: 15px;
-    padding-right: 25%;
-    margin-right: 45px;
+    padding-right: 33%;
+    text-align: justify;
   }
 
   .parallaxAa .parrafo3 {
-    font-size: 13px;
+    font-size: 12.3px;
     line-height: 15px;
-    padding-right: 45%;
-    margin-right: 50px;
+    padding-right: 41%;
+    text-align: justify;
+    hyphens: auto;
   }
 
   .parallaxAa .antetitulo {
@@ -695,9 +916,9 @@
 
   .parallaxAa .img-mr {
     position: relative; 
-    height: 330px;
-    left: 90px;
-    top: 281px;
+    height: 300px;
+    left: 115px;
+    top: 319px;
   }
 
   .parallaxAa .fondo {
