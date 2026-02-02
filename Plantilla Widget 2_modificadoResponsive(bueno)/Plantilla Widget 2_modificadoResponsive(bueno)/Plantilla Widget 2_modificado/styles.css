@@ -54,7 +54,7 @@
   letter-spacing: 0;
   margin: 0;
   text-align: justify;
-  margin-top: 10px;
+  margin-top: 8.5px;
 }
 
 .parallaxAa .titulo-white,
@@ -668,41 +668,46 @@
 }
 
 /* =========================
-   MÓVIL GRANDE (430/414/412)
+   MÓVIL GRANDE — SOLO 430px
    ========================= */
-@media (min-width: 401px) and (max-width: 440px) {
+@media (min-width: 428px) and (max-width: 432px) {
+
   .parallaxAa .titulo { 
-    font-size: 20px; 
-  }
-  
-  .parallaxAa .img-mr { 
-    height: 62%; right: -30px; 
+    font-size: 19px; 
   }
 
-  /* Justify sin “huecos bestias” */
   .parallaxAa .parrafo{
-
+    padding-right: 0px;
+    text-align: left;
   }
 
   .parallaxAa .parrafo2{
-
+    padding-right: 33%;
+    text-align: left;
   }
 
   .parallaxAa .parrafo3 {
-    hyphens: auto;
-    overflow-wrap: anywhere;
-    text-justify: inter-word;
-    text-align-last: left;
+    padding-right: 50%;
+    text-align: left;
+  }
+
+  .parallaxAa .img-mr { 
+    height: 65%; 
+    left: 135px; 
+  }
+
+  .parallaxAa .custom-button { 
+    padding: 8px 12px; 
+    font-size: 11px; 
   }
 }
 
+
 /* =========================
-   MÓVIL MEDIO (390)
+   MÓVIL GRANDE (414/412 y cercanos) — SIN 430
    ========================= */
-@media (min-width: 377px) and (max-width: 400px) {
-  .parralaxAa .antetitulo{
-    margin-top: 13%;
-  }
+@media (min-width: 401px) and (max-width: 429px),
+       (min-width: 431px) and (max-width: 440px) {
 
   .parallaxAa .titulo { 
     font-size: 19px; 
@@ -710,19 +715,56 @@
 
   .parallaxAa .parrafo{
     padding-right: 5px;
+    text-align: left;
   }
 
   .parallaxAa .parrafo2{
-    padding-right: 20%;
+    padding-right: 29%;
+    text-align: left;
+  }
+
+  .parallaxAa .parrafo3 {
+    padding-right: 46%;
+    text-align: left;
+  }
+
+  .parallaxAa .img-mr { 
+    height: 65%; 
+    left: 135px; 
+  }
+
+  .parallaxAa .custom-button { 
+    padding: 8px 12px; 
+    font-size: 11px; 
+  }
+}
+
+/* =========================
+   MÓVIL MEDIO (390) iPhone 12 Pro
+   ========================= */
+@media (min-width: 377px) and (max-width: 400px) {
+  .parallaxAa .titulo { 
+    font-size: 19px; 
+  }
+
+  .parallaxAa .parrafo{
+    padding-right: 0px;
+    text-align: left;
+  }
+
+  .parallaxAa .parrafo2{
+    padding-right: 25%;
+    text-align: left;
   }
 
   .parallaxAa .parrafo3 { 
+    padding-right: 45%;
     text-align: left;
   }
   
   .parallaxAa .img-mr { 
-    height: 52%; 
-    left: 147px; 
+    height: 60%; 
+    left: 130px; 
   }
 }
 
@@ -735,11 +777,12 @@
   }
   
   .parallaxAa .parrafo{
+    padding-right: 0px;
     text-align: left;
   }
 
   .parallaxAa .parrafo2{
-    padding-right: 18%;
+    padding-right: 21%;
     text-align: left;
   }
 
@@ -749,8 +792,8 @@
   }
   
   .parallaxAa .img-mr { 
-    height: 55%; 
-    left: 123px; 
+    height: 53%; 
+    left: 130px; 
   }
 
   .parallaxAa .custom-button { 
@@ -763,32 +806,33 @@
    Galaxy S8+ (360)
    (Mismo contenido, rango separado)
    ========================= */
-@media (min-width: 341px) and (max-width: 360px) {
+@media (min-width: 341px) and (max-width: 360px) {  
   .parallaxAa .titulo {
     font-size: 19px; 
   }
   
   .parallaxAa .parrafo{
+    padding-right: 0px;
     text-align: left;
   }
 
   .parallaxAa .parrafo2{
-    padding-right: 18%;
+    padding-right: 17%;
     text-align: left;
   }
 
   .parallaxAa .parrafo3 {
-    padding-right: 40%; 
+    padding-right: 37%; 
     text-align: left;
   }
   
   .parallaxAa .img-mr { 
-    height: 55%; 
-    left: 123px; 
+    height: 53%; 
+    left: 130px; 
   }
 
   .parallaxAa .custom-button { 
-    padding: 8px 12px; 
+    padding: 6px 12px; 
     font-size: 11px; 
   }
 }
