@@ -384,42 +384,42 @@
   }
 
   .parallaxAa .titulo {
-    font-size: 18px;
+    font-size: 28px;
     padding-right: 30%;
   }
 
   .parallaxAa .parrafo {
     font-size: 14px;
     line-height: 20px;
-    margin-right: 50px;
-        text-align: justify;
+    margin-right: 25px;
+    text-align: justify;
 
   }
 
   .parallaxAa .parrafo2 {
     font-size: 14px;
     line-height: 20px;
-    margin-right: 35px;
-        text-align: justify;
+    margin-right: 25px;
+    text-align: justify;
 
   }
 
   .parallaxAa .parrafo3 {
     font-size: 14px;
     line-height: 20px;
-    margin-right: 35px;
-        text-align: justify;
+    margin-right: 25px;
+    text-align: justify;
 
   }
 
   .parallaxAa .antetitulo {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .parallaxAa .img-mr {
     position: relative; 
     height: 650px;
-    left: 380px;
+    left: 420px;
     top: 29px;
   }
 
@@ -574,22 +574,22 @@
   .parallaxAa .parrafo {
     font-size: 16px;
     line-height: 22px;
-    padding-right: 33%;
+    padding-right: 36%;
     text-align: justify;
   }
 
   .parallaxAa .parrafo2 {
     font-size: 16px;
     line-height: 22px;
-    padding-right: 40%;
+    padding-right: 38%;
     text-align: justify;
-    hyphens: auto;
+
   }
 
   .parallaxAa .parrafo3 {
     font-size: 16px;
     line-height: 22px;
-    padding-right: 45%;
+    padding-right: 40%;
     text-align: justify;
   }
 
@@ -599,8 +599,8 @@
 
   .parallaxAa .img-mr {
     position: relative;
-    height: 572px;
-    left: 289px;
+    height: 500px;
+    left: 360px;
     top: 59px;
   }
 
@@ -619,33 +619,37 @@
    MÓVIL: base (hasta 576)
    ========================= */
 @media (max-width: 576px) {
-  .parallaxAa { 
-    padding: 40px 0;
-    min-height: 520px; 
-  }
-  
-  .parallaxAa .parallax-container { 
-    align-items: flex-start; 
-    padding-top: 18px;       
-    padding-bottom: 18px;
+  .parallaxAa .titulo { 
+    font-size: 28px; 
+    margin-top: 0; 
   }
   
   .parallaxAa .antetitulo { 
-    font-size: 15px; margin-top: 0; 
+    font-size: 15px; 
+    margin-top: 0; 
   }
 
-  .parallaxAa .parrafo,
-  .parallaxAa .parrafo2,
+  .parallaxAa .parrafo { 
+    font-size: 13px;
+    line-height: 15px;
+    padding-right: 2%;
+  }
+
+  .parallaxAa .parrafo2 { 
+    font-size: 13px;
+    line-height: 15px;
+    padding-right: 3%;
+  }
+
   .parallaxAa .parrafo3 { 
     font-size: 13px;
     line-height: 15px;
+    padding-right: 4%;
   }
 
   .parallaxAa .img-mr { 
     position: absolute;
-    height: 70%; 
-    right: auto;
-    width: auto;
+    height: 83%; 
     left: auto;
     top: auto; 
   }
@@ -771,7 +775,7 @@
 /* =========================
    iPhone SE (375)
    ========================= */
-@media (min-width: 361px) and (max-width: 376px) {
+@media (min-width: 362px) and (max-width: 376px) {
   .parallaxAa .titulo {
     font-size: 19px; 
   }
@@ -806,33 +810,38 @@
    Galaxy S8+ (360)
    (Mismo contenido, rango separado)
    ========================= */
-@media (min-width: 341px) and (max-width: 360px) {  
+@media (min-width: 341px) and (max-width: 361px) {  
   .parallaxAa .titulo {
     font-size: 19px; 
   }
+
+  .parallaxAa .antetitulo {
+    margin-top: 15px;
+  }
   
   .parallaxAa .parrafo{
-    padding-right: 0px;
+    max-width: 89%;
     text-align: left;
   }
 
   .parallaxAa .parrafo2{
-    padding-right: 17%;
+    max-width: 71%;
     text-align: left;
   }
 
   .parallaxAa .parrafo3 {
-    padding-right: 37%; 
+    max-width: 62%;
     text-align: left;
   }
   
   .parallaxAa .img-mr { 
-    height: 53%; 
-    left: 130px; 
+    height: 45%; 
+    left: 155px; 
   }
 
   .parallaxAa .custom-button { 
-    padding: 6px 12px; 
+    padding: 6px 12px;
+    margin-bottom: 15px;
     font-size: 11px; 
   }
 }
