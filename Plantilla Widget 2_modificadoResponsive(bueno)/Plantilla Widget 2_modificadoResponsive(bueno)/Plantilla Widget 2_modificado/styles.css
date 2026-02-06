@@ -112,7 +112,7 @@
   inset: 0;
   z-index: 0;
 
-  background-image: url("splashes/o_1gr0b14c0pev1vjp1f1r17ac15s0a.jpeg");
+  background-image: url("imagenes/o_1gr0b14c0pev1vjp1f1r17ac15s0a.jpeg");
   background-size: cover;      /* <- antes estaba contain, por eso no llenaba */
   background-position: center; /* <- evita huecos raros */
   background-repeat: no-repeat;
