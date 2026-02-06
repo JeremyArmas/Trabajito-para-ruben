@@ -133,7 +133,8 @@
 }
 
 /* Imagen (mujer) */
-.parallaxAa .img-mr {
+.parallaxAa .img-mr,
+.parallaxAa .fade-in-right {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -141,6 +142,20 @@
   width: auto;
   object-fit: contain;
   z-index: 2;
+  opacity: 0;
+  transform: translateX(250px);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* animación */
+.fade-in-right{
+  animation: fade-in-right 1.8s cubic-bezier(0.390,0.575,0.565,1.000) both;
+}
+
+@keyframes fade-in-right{
+  from { transform: translateX(250px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
 }
 
 /* Contenido por encima de todo */
@@ -237,6 +252,8 @@
   align-items: center;
 }
 
+
+
 .parallaxAa .text-uppercase { text-transform: uppercase; }
 
 /* =========================
@@ -314,8 +331,9 @@
     right: clamp(28px, -18vw, -10px); 
   }
 
-
+  
 }
+
 
 /* Tablet y menos */
 @media (max-width: 991.98px) {
@@ -355,11 +373,67 @@
   .parallaxAa .img-mr {
     width: clamp(260px, 52vw, 420px);
     right: clamp(10px, -20vw, -40px);
-    clip-path: none; /* ya no hay borde redondeado */
   }
 
   .parallaxAa .custom-button {
     width: 25%;
+    max-width: 260px;
+    height: auto;
+    padding: 10px 4px;
+  }
+
+  .fade-in-right {
+	  animation: fade-in-right 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+
+  .parallaxAa .separa-50 { height: 18px; }
+  .parallaxAa .separa-30 { height: 12px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575.98px) {
+  .parallaxAa { 
+    padding: 40px 0; 
+  }
+
+  .parallaxAa .parallax-container {
+    inset: 0;
+    border-radius: 0px 0 0 0px;
+    min-height: 450px;
+    margin-left: auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .parallaxAa .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .parallaxAa .parrafo{
+    padding-right: clamp(20px, 5vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+  
+  .parallaxAa .parrafo2,
+  .parallaxAa .parrafo3 {
+    padding-right: clamp(110px, 20vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+
+  .parallaxAa .img-mr {
+    left: auto !important;                 /* quita el “bloqueo” */
+    right: clamp(-55px, -26vw, -170px);    /* se va saliendo al estrechar */
+    width: clamp(220px, 78vw, 340px);
+    height: auto;
+    max-height: 100%;
+  }
+
+  .parallaxAa .custom-button {
+    width: 35%;
     max-width: 260px;
     height: auto;
     padding: 10px 4px;
@@ -370,13 +444,15 @@
   .parallaxAa .separa-5  { height: 3px; }
 }
 
-/* Móvil */
-@media (max-width: 575.98px) {
-  .parallaxAa { padding: 40px 0; }
+@media (max-width: 433px){
+  .parallaxAa { 
+    padding: 40px 0; 
+  }
 
   .parallaxAa .parallax-container {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    inset: 0;
+    border-radius: 0px 0 0 0px;
+    margin-left: auto;
   }
 
   .parallaxAa .container {
@@ -384,17 +460,94 @@
     padding-right: 18px;
   }
 
-  .parallaxAa .parrafo,
-  .parallaxAa .parrafo2,
+  .parallaxAa .parrafo{
+    padding-right: clamp(1px, 0vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+  
+  .parallaxAa .parrafo2{
+    padding-right: clamp(50px, 15vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+
   .parallaxAa .parrafo3 {
     padding-right: clamp(110px, 20vw, 260px);
     font-size: 11.5px;
+    text-align: left;
   }
 
   .parallaxAa .img-mr {
-    width: clamp(220px, 70vw, 340px);
-    left: clamp(250px, -20vw, -40px);
+    left: auto !important;                 /* quita el “bloqueo” */
+    right: clamp(-55px, -26vw, -170px);    /* se va saliendo al estrechar */
+    width: clamp(220px, 78vw, 340px);
+    height: auto;
+    max-height: 100%;
   }
+
+  .parallaxAa .custom-button {
+    width: 35%;
+    max-width: 260px;
+    height: auto;
+    padding: 6px 4px;
+  }
+
+
+  .parallaxAa .separa-50 { height: 18px; }
+  .parallaxAa .separa-30 { height: 12px; }
+  .parallaxAa .separa-5  { height: 3px; }
+}
+
+@media (max-width: 371px){
+  .parallaxAa { 
+    padding: 40px 0; 
+  }
+
+  .parallaxAa .parallax-container {
+    inset: 0;
+    border-radius: 0px 0 0 0px;
+    margin-left: auto;
+  }
+
+  .parallaxAa .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .parallaxAa .parrafo{
+    padding-right: clamp(1px, 0vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+  
+  .parallaxAa .parrafo2{
+    padding-right: clamp(26px, 10vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+
+  .parallaxAa .parrafo3 {
+    padding-right: clamp(30px, 21vw, 260px);
+    font-size: 11.5px;
+    text-align: left;
+  }
+
+  .parallaxAa .img-mr {
+    left: auto !important;                 /* quita el “bloqueo” */
+    right: clamp(-40px, -22vw, -120px);    /* se va saliendo al estrechar */
+    width: clamp(190px, 74vw, 340px);
+    height: auto;
+    max-height: 100%;
+  }
+
+  .parallaxAa .custom-button {
+    width: 35%;
+    max-width: 260px;
+    height: auto;
+    padding: 6px 4px;
+  }
+
 
   .parallaxAa .separa-50 { height: 18px; }
   .parallaxAa .separa-30 { height: 12px; }
